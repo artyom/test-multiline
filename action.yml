@@ -9,6 +9,9 @@ inputs:
   two:
     description: Another argument
     required: false
+  three:
+    description: And another argument
+    required: false
 
 runs:
   using: docker
