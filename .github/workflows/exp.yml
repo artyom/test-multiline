@@ -1,0 +1,20 @@
+name: Run experiment
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+
+    steps:
+      - uses: artyom/test-multiline@main
+        with:
+          one: Value for argument one
+          two: |
+            line 1
+            line 2
+            line 3

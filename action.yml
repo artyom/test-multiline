@@ -1,0 +1,18 @@
+name: Test action
+description: >
+  Exploring how inputs are passed to docker-based action
+
+inputs:
+  one:
+    description: Some argument
+    required: true
+  two:
+    description: Another argument
+    required: false
+
+runs:
+  using: docker
+  image: docker://ghcr.io/artyom/test-multiline:latest
+  args:
+    - ${{ inputs.one }}
+    - ${{ inputs.two }}
